@@ -31,8 +31,8 @@ public class SuperheroConversion {
             superheroDTO.setSkills(skillsSet);
         }
         if (superhero.getAllies() != null && superhero.getAllies().size() > 0) {
-                Set<SuperheroDTO> allies = superhero.getAllies().stream()
-                        .map(SuperheroConversion::toDTO).collect(Collectors.toSet());
+            Set<SuperheroDTO> allies = superhero.getAllies().stream()
+                    .map(SuperheroConversion::toDTO).collect(Collectors.toSet());
             superheroDTO.setAllies(allies);
         }
         return superheroDTO;

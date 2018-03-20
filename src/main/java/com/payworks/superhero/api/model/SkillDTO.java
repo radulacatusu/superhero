@@ -12,11 +12,6 @@ public class SkillDTO {
     public SkillDTO() {
     }
 
-    public SkillDTO(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public long getId() {
         return id;
     }

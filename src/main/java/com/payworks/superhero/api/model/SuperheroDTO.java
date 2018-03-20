@@ -1,6 +1,5 @@
 package com.payworks.superhero.api.model;
 
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -16,15 +15,6 @@ public class SuperheroDTO {
     private Set<SuperheroDTO> allies;
 
     public SuperheroDTO() {
-    }
-
-    public SuperheroDTO(long id, String name, String pseudonym, String publisher, Set<SkillDTO> skills, Set<SuperheroDTO> allies) {
-        this.id = id;
-        this.name = name;
-        this.pseudonym = pseudonym;
-        this.publisher = publisher;
-        this.skills = skills;
-        this.allies = allies;
     }
 
     public long getId() {

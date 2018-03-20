@@ -31,7 +31,7 @@ public class SkillServiceImpl implements SkillService {
             Skill entity = skillConversion.fromDTO(dto);
             existingEntity = skillRepository.saveAndFlush(entity);
         } else {
-            LOGGER.info( "Skill: {} already exists.", existingEntity );
+            LOGGER.debug("Skill: {} already exists.", existingEntity);
         }
         return skillConversion.toDTO(existingEntity);
     }

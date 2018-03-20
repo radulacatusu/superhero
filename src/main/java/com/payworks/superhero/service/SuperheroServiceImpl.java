@@ -45,7 +45,7 @@ public class SuperheroServiceImpl implements SuperheroService {
             entity.setAllies(getAllies(superhero));
             existingEntity = superheroRepository.saveAndFlush(entity);
         } else {
-            LOGGER.info( "Superhero: {} already exists.", superhero );
+            LOGGER.info("Superhero: {} already exists.", superhero);
         }
         return superheroConversion.toDTO(existingEntity);
     }
@@ -77,4 +77,5 @@ public class SuperheroServiceImpl implements SuperheroService {
         }
         return existingAllies;
     }
+
 }

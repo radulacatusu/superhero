@@ -17,4 +17,16 @@ spring.datasource:
 spring.jpa:
   hibernate:
     ddl-auto: update
-show-sql: false
+  show-sql: false
+
+security:
+  signing-key: fiXty1x4WHtVZha
+  security-realm: Payworks Realm
+  jwt:
+     client-id: payworks
+     client-secret: payworks-secret
+     grant-type-password: password
+     grant-type-refresh-token: refresh_token
+     scope-read: read
+     scope-write: write
+     resource-ids: payworksresourceid
