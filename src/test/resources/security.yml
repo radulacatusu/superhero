@@ -1,0 +1,9 @@
+security.signing-key: fiXty1x4WHtVZha
+security.security-realm: Payworks Realm
+security.jwt.client-id: payworks
+security.jwt.client-secret: payworks-secret
+security.jwt.grant-type-password: password
+security.jwt.grant-type-refresh-token: refresh_token
+security.jwt.scope-read: read
+security.jwt.scope-write: write
+security.jwt.resource-ids: payworksresourceid
