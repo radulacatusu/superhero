@@ -21,7 +21,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableWebSecurity
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
     @Autowired
     private GeneralConfig generalConfig;
 
@@ -31,6 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("payworks").password("payworks").roles("ADMIN").and()
                 .withUser("stefan").password("stefan").roles("ADMIN").and()
+                .withUser("admin").password("admin").roles("ADMIN").and()
                 .withUser("user").password("user").roles("USER");
     }
 
@@ -74,4 +74,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         defaultTokenServices.setSupportRefreshToken(true);
         return defaultTokenServices;
     }
+
 }

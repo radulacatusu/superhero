@@ -1,4 +1,4 @@
-package com.payworks.superhero.controllers;
+package com.payworks.superhero.controller;
 
 import com.payworks.superhero.api.model.SuperheroDTO;
 import com.payworks.superhero.service.SuperheroService;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
