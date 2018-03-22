@@ -129,6 +129,39 @@
                     </excludes>
                 </configuration>
             </plugin>
+             <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                
+                 <configuration>
+                  <images>
+                        <image>
+                          <name>superhero</name>
+                          <alias>superhero</alias>
+                          <build>
+                            <filter>@</filter>
+                            <dockerFileDir>${project.basedir}</dockerFileDir>
+                            <assembly>
+                              <descriptorRef>artifact</descriptorRef>
+                            </assembly>
+                          </build>
+                          <run>
+                            <namingStrategy>alias</namingStrategy>
+                            <ports> 
+                              <port>9090:8080</port>
+                            </ports>
+                             <wait> 
+                               <http>
+                                  <url>http://54.212.194.122:8080/api/superheroes </url>
+                               </http>
+                               <time>90000</time>
+                             </wait>
+                          </run>
+                        </image>
+                  </images>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <repositories>
