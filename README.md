@@ -1,4 +1,4 @@
-## An Spring Boot Application for Securing a REST API with JSON Web Token (JWT)
+## A Spring Boot Application for Securing a REST API with JSON Web Token (JWT)
 
 
 ## Main building blocks
